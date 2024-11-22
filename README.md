@@ -110,7 +110,3 @@ MIT License - feel free to use and modify for your needs!
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to submit issues and pull requests.
-
----
-
-Built with ❤️ by [Tony Sader](https://github.com/tony-42069)
