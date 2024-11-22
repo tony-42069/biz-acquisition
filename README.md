@@ -72,7 +72,7 @@ npm start
 
 ## 🌐 Live Demo
 
-Try it live: [Business Acquisition Analyzer](https://business-acquisition-analyzer.netlify.app/)
+Try it live: [Business Acquisition Analyzer](https://www.abizadvisors.com/biz-acquisition)
 
 ## 🔧 Sample Business Scenario
 
