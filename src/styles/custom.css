@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-image: none;
+  }
+  
+  body {
+    @apply bg-[#0A0F1C] text-white font-sans;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@layer components {
+  .font-space-grotesk {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-4;
+    position: relative;
+    z-index: 1;
+  }
+
+  .container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+    z-index: -1;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    @apply rounded-xl p-6 max-w-2xl mx-auto;
+  }
+
+  .glass-card .title {
+    @apply text-6xl font-bold mb-8;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.02em;
+    background: linear-gradient(to right, #60a5fa, #34d399);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glass-card .title-emoji {
+    font-size: 0.9em;
+    -webkit-text-fill-color: initial;
+  }
+
+  .input-section {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+  }
+
+  .input-group {
+    @apply space-y-2;
+  }
+
+  .input-label {
+    @apply text-sm text-gray-300 font-medium;
+  }
+  
+  .input-field {
+    @apply w-full max-w-[240px] bg-black/20 border border-blue-500/20 rounded-lg px-3 py-2 
+           text-white focus:outline-none focus:border-blue-400 transition-colors;
+  }
+
+  select.input-field {
+    @apply bg-black/20;
+  }
+
+  select.input-field option {
+    @apply bg-[#0A0F1C] text-white;
+  }
+
+  .gradient-button {
+    @apply bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700
+           text-white px-6 py-3 rounded-lg flex items-center gap-2 transition-all duration-200
+           transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .metrics-section {
+    @apply max-w-2xl mx-auto;
+  }
+
+  .metrics-grid {
+    @apply grid grid-cols-2 md:grid-cols-4 gap-4;
+  }
+
+  .metric-card {
+    @apply bg-black/20 backdrop-blur-md rounded-lg p-3;
+  }
+
+  .metric-value {
+    @apply text-lg font-bold;
+    background: linear-gradient(to right, #60a5fa, #34d399);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .metric-label {
+    @apply text-sm text-gray-400;
+  }
+
+  .metrics-row {
+    @apply grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto;
+  }
+
+  .analysis-section {
+    @apply glass-card mt-6;
+  }
+
+  .analysis-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6 mt-4;
+  }
+
+  .analysis-card {
+    @apply glass-card;
+  }
+
+  .analysis-title {
+    @apply text-lg font-semibold mb-3 flex items-center gap-2;
+  }
+
+  .analysis-list {
+    @apply space-y-2;
+  }
+
+  .analysis-item {
+    @apply flex items-start gap-2 text-sm;
+  }
+
+  .chart-container {
+    @apply glass-card mt-6 p-4;
+    height: 300px;
+  }
+}

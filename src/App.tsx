@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import BusinessCalculator from './components/BusinessCalculator';
+import './styles/custom.css';
 
 function App() {
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      '--bg-image',
+      `url(${process.env.PUBLIC_URL}/biz-acq-analyzer-background.png)`
+    );
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen">
+      <BusinessCalculator />
     </div>
   );
 }
